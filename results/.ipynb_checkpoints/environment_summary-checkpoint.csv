@@ -1,0 +1,4 @@
+Stage,Number of patients,Number of state variables,Number of actions,Actions
+easy,110521,3,2,"{0: 'ne rien faire', 1: 'envoyer rappel'}"
+medium,110521,9,3,"{0: 'ne rien faire', 1: 'envoyer rappel', 2: 'prioriser'}"
+hard,110521,12,4,"{0: 'ne rien faire', 1: 'envoyer rappel', 2: 'prioriser', 3: 'proposer reprogrammation'}"

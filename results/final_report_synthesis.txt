@@ -1,0 +1,31 @@
+Projet : C-MARL pour la réduction des absences aux rendez-vous médicaux
+
+1. Objectif
+L'objectif est de simuler un système multi-agents coopératif capable d'améliorer la gestion des rendez-vous médicaux.
+Les agents apprennent à choisir des actions comme ne rien faire, envoyer un rappel, prioriser un patient ou proposer une reprogrammation.
+
+2. Dataset
+Le projet utilise le dataset Medical Appointment No Shows. Chaque ligne représente un rendez-vous médical.
+La variable No_show indique si le patient s'est présenté ou non.
+
+3. Stages
+Stage Easy : variables limitées, actions simples.
+Stage Medium : ajout de variables médicales.
+Stage Hard : ajout de variables plus complètes comme WaitingGroup, AppointmentWeekday et Neighbourhood.
+
+4. Méthode
+L'approche repose sur un Q-learning discret, avec une Q-table sauvegardée sous forme de checkpoint pour chaque stage.
+
+5. Résultats
+ Stage  Total Reward  Average Reward  Total Steps  Good Decisions  Good Decision Rate  Interventions  Intervention Rate  Unnecessary Interventions  Unnecessary Intervention Rate  Gain vs Easy  Gain vs Medium
+  Easy       40048.5        0.362361       110521           72655            0.657386          31390           0.284018                      23471                       0.212367      0.000000       -0.241135
+Medium       66699.0        0.603496       110521           59386            0.537328          51377           0.464862                      40099                       0.362818      0.241135        0.000000
+  Hard      191580.0        1.733426       110521           74412            0.673284          45221           0.409162                      29508                       0.266990      1.371065        1.129930
+
+6. Gain Hard
+   Comparison     Gain
+  Hard - Easy 1.371065
+Hard - Medium 1.129930
+
+Conclusion :
+Le stage Hard est censé obtenir le meilleur gain car il utilise davantage d'informations pour guider la décision des agents.
