@@ -1,11 +1,18 @@
+Evaluation summary for the educational appointment no-show simulation
 
-Résumé de l'évaluation C-MARL
+ Stage  Total Reward  Average Reward  Total Steps  Good Decisions  Good Decision Rate  Interventions  Intervention Rate  Useful Interventions  Useful Intervention Rate  Unnecessary Interventions  Unnecessary Intervention Rate
+  Easy      13179.00        0.596200        22105           17642            0.798100              0           0.000000                     0                  0.000000                          0                       0.000000
+Medium      12814.25        0.579699        22105           17454            0.789595            392           0.017734                   102                  0.004614                        290                       0.013119
+  Hard      10918.25        0.493927        22105           16485            0.745759           3101           0.140285                   972                  0.043972                       2129                       0.096313
 
-Average Reward Easy   : 0.3624
-Average Reward Medium : 0.6035
-Average Reward Hard   : 1.7334
+Hard gain summary
+                       Metric        Direction     Hard   Easy   Medium  Hard_minus_Easy  Hard_minus_Medium
+               Average Reward higher_is_better 0.493927 0.5962 0.579699        -0.102273          -0.085772
+           Good Decision Rate higher_is_better 0.745759 0.7981 0.789595        -0.052341          -0.043836
+     Useful Intervention Rate higher_is_better 0.043972 0.0000 0.004614         0.043972           0.039358
+Unnecessary Intervention Rate  lower_is_better 0.096313 0.0000 0.013119         0.096313           0.083194
 
-Gain Hard vs Easy     : 1.3711
-Gain Hard vs Medium   : 1.1299
-
-Meilleur stage        : Hard
+Highest average reward stage: Easy
+Highest good decision rate stage: Easy
+Lowest unnecessary intervention rate stage: Easy
+Hard does not dominate the held-out test metrics in this fair evaluation.
